@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>FanTuner Updates</title>
+    <link>https://github.com/technohdyt/fantuner-releases</link>
+    <description>Most recent FanTuner release.</description>
+    <language>en</language>
+    <item>
+      <title>FanTuner 1.0</title>
+      <pubDate>Mon, 20 Jul 2026 06:03:37 +0000</pubDate>
+      <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+      <enclosure
+        url="https://github.com/technohdyt/fantuner-releases/releases/download/v1.0/FanTuner-1.0.dmg"
+        length="6403100"
+        type="application/octet-stream"
+        sparkle:edSignature="o/AR18rSL6ixlVPrw+e8Xp1YqcfRAw9o7LMlmx5agdDJNLjyZpl28ZabNUag10lFSX0M2oRyB8ngPpfeggGfCw=="
+        sparkle:shortVersionString="1.0"
+        sparkle:version="1"/>
+    </item>
+  </channel>
+</rss>
