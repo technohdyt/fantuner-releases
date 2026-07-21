@@ -1,21 +1,24 @@
-<?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" xmlns:dc="http://purl.org/dc/elements/1.1/">
-  <channel>
-    <title>FanTuner Updates</title>
-    <link>https://github.com/technohdyt/fantuner-releases</link>
-    <description>Most recent FanTuner release.</description>
-    <language>en</language>
-    <item>
-      <title>FanTuner 1.0</title>
-      <pubDate>Mon, 20 Jul 2026 06:03:37 +0000</pubDate>
-      <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-      <enclosure
-        url="https://github.com/technohdyt/fantuner-releases/releases/download/v1.0/FanTuner-1.0.dmg"
-        length="6403100"
-        type="application/octet-stream"
-        sparkle:edSignature="o/AR18rSL6ixlVPrw+e8Xp1YqcfRAw9o7LMlmx5agdDJNLjyZpl28ZabNUag10lFSX0M2oRyB8ngPpfeggGfCw=="
-        sparkle:shortVersionString="1.0"
-        sparkle:version="1"/>
-    </item>
-  </channel>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+    <channel>
+        <title>FanTuner Updates</title>
+        <link>https://github.com/technohdyt/fantuner-releases</link>
+        <description>Most recent FanTuner release.</description>
+        <language>en</language>
+        <item>
+            <title>1.0.1</title>
+            <pubDate>Tue, 21 Jul 2026 19:27:45 -0400</pubDate>
+            <link>https://fantuner.com</link>
+            <sparkle:version>2</sparkle:version>
+            <sparkle:shortVersionString>1.0.1</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <enclosure url="https://github.com/technohdyt/fantuner-releases/releases/download/v1.0.1/FanTuner-1.0.1.dmg" length="6491964" type="application/octet-stream" sparkle:edSignature="1rU9ldozZ+9Cr17s9cS5TWWaolpFspXyf25cuREsxwMj2hEm7MAGX9t41rtnIeTtBRf9WQhCz2HA+WeSU0pBCQ=="/>
+        </item>
+        <item>
+            <title>FanTuner 1.0</title>
+            <pubDate>Mon, 20 Jul 2026 06:03:37 +0000</pubDate>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <enclosure url="https://github.com/technohdyt/fantuner-releases/releases/download/v1.0/FanTuner-1.0.dmg" length="6403100" type="application/octet-stream" sparkle:edSignature="o/AR18rSL6ixlVPrw+e8Xp1YqcfRAw9o7LMlmx5agdDJNLjyZpl28ZabNUag10lFSX0M2oRyB8ngPpfeggGfCw==" sparkle:shortVersionString="1.0" sparkle:version="1"/>
+        </item>
+    </channel>
 </rss>
