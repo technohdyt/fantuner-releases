@@ -50,7 +50,7 @@ jobs:
       - name: Fetch Sparkle tools
         run: |
           curl -sL -o sparkle.tar.xz \
-            https://github.com/sparkle-project/Sparkle/releases/download/2.6.4/Sparkle-2.6.4.tar.xz
+            https://github.com/sparkle-project/Sparkle/releases/download/2.9.4/Sparkle-2.9.4.tar.xz
           tar -xf sparkle.tar.xz
           test -x ./bin/generate_appcast
           test -x ./bin/sign_update
@@ -68,9 +68,10 @@ jobs:
             --download-url-prefix "https://github.com/${{ github.repository }}/releases/download/$release_tag/" \
             --maximum-versions 3 \
             updates
-          ./bin/sign_update \
-            --ed-key-file /tmp/sparkle-ed25519.key \
-            updates/appcast.xml
+          # generate_appcast signs the complete feed. Verify that exact output
+          # before publishing it; this catches tool/signature format drift.
+          ./bin/sign_update --verify \
+            --ed-key-file /tmp/sparkle-ed25519.key updates/appcast.xml
           cp updates/appcast.xml appcast.xml
           rm -f /tmp/sparkle-ed25519.key
         env:
