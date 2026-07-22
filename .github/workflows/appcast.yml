@@ -34,7 +34,7 @@ jobs:
     runs-on: macos-latest
     steps:
       - name: Check out repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Download release DMG
         run: |
@@ -52,7 +52,8 @@ jobs:
           curl -sL -o sparkle.tar.xz \
             https://github.com/sparkle-project/Sparkle/releases/download/2.6.4/Sparkle-2.6.4.tar.xz
           tar -xf sparkle.tar.xz
-          ./bin/generate_appcast --version
+          test -x ./bin/generate_appcast
+          test -x ./bin/sign_update
 
       - name: Generate appcast.xml
         run: |
