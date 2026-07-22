@@ -66,7 +66,7 @@ jobs:
           ./bin/generate_appcast \
             --ed-key-file /tmp/sparkle-ed25519.key \
             --download-url-prefix "https://github.com/${{ github.repository }}/releases/download/$release_tag/" \
-            --maximum-versions 3 \
+            --maximum-versions 1 \
             updates
           # generate_appcast signs the complete feed. Verify that exact output
           # before publishing it; this catches tool/signature format drift.
