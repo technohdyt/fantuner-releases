@@ -16,27 +16,9 @@ IMPORTANT: This file was signed by Sparkle. Any modifications to this file requi
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
             <enclosure url="https://github.com/matthewjgl/fantuner-releases/releases/download/v1.0.3/FanTuner-1.0.3.dmg" length="8511242" type="application/octet-stream" sparkle:edSignature="7yP0kl3QRZ3EOZn/57UY3gAnLYZ693LvBkwnOeArVPXA2IVqT8xsYgCMYNQtsqd09EWzMM4H3qrkYE8FROffAQ=="/>
         </item>
-        <item>
-            <title>1.0.2</title>
-            <pubDate>Wed, 22 Jul 2026 03:47:25 -0400</pubDate>
-            <link>https://github.com/matthewjgl/fantuner-releases/releases/tag/v1.0.2</link>
-            <sparkle:version>3</sparkle:version>
-            <sparkle:shortVersionString>1.0.2</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <enclosure url="https://github.com/matthewjgl/fantuner-releases/releases/download/v1.0.2/FanTuner-1.0.2.dmg" length="6736081" type="application/octet-stream" sparkle:edSignature="v0ub9yK7cS3sKpET5fFXEBrQcLM+kotSGESrmisQYK3q0QFaIIV2dhM7SzD7l/cDOvrY4qI2Bv3Cub1Jwe/VCw=="/>
-        </item>
-        <item>
-            <title>1.0.1</title>
-            <pubDate>Tue, 21 Jul 2026 19:27:45 -0400</pubDate>
-            <link>https://fantuner.com</link>
-            <sparkle:version>2</sparkle:version>
-            <sparkle:shortVersionString>1.0.1</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <enclosure url="https://github.com/matthewjgl/fantuner-releases/releases/download/v1.0.1/FanTuner-1.0.1.dmg" length="6491964" type="application/octet-stream" sparkle:edSignature="1rU9ldozZ+9Cr17s9cS5TWWaolpFspXyf25cuREsxwMj2hEm7MAGX9t41rtnIeTtBRf9WQhCz2HA+WeSU0pBCQ=="/>
-        </item>
     </channel>
 </rss>
 <!-- sparkle-signatures:
-edSignature: v2YiyWeMGBjfy9byLooliVZb95FyZCmoy1HfBEiyjcuLU/4154xoXGBxuLFLQngOuO1QrUW87upKHfNls5QMBQ==
-length: 2642
+edSignature: gz60U1l/T+tsntNv36LHkA8KuiEI89DqkRF/w6dxDsMQoW8/bp69We5UrYUNHw425LeQ9KhFN0UsFNlKiDqZDQ==
+length: 1279
 -->
