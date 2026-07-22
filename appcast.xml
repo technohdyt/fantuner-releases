@@ -6,6 +6,15 @@
         <description>Most recent FanTuner release.</description>
         <language>en</language>
         <item>
+            <title>1.0.2</title>
+            <pubDate>Wed, 22 Jul 2026 03:47:25 -0400</pubDate>
+            <link>https://github.com/technohdyt/fantuner-releases/releases/tag/v1.0.2</link>
+            <sparkle:version>3</sparkle:version>
+            <sparkle:shortVersionString>1.0.2</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <enclosure url="https://github.com/technohdyt/fantuner-releases/releases/download/v1.0.2/FanTuner-1.0.2.dmg" length="6736081" type="application/octet-stream" sparkle:edSignature="v0ub9yK7cS3sKpET5fFXEBrQcLM+kotSGESrmisQYK3q0QFaIIV2dhM7SzD7l/cDOvrY4qI2Bv3Cub1Jwe/VCw=="/>
+        </item>
+        <item>
             <title>1.0.1</title>
             <pubDate>Tue, 21 Jul 2026 19:27:45 -0400</pubDate>
             <link>https://fantuner.com</link>
