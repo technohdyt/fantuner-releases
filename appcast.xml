@@ -9,6 +9,14 @@ IMPORTANT: This file was signed by Sparkle. Any modifications to this file requi
         <description>Most recent FanTuner release.</description>
         <language>en</language>
         <item>
+            <title>1.0.3</title>
+            <pubDate>Wed, 22 Jul 2026 09:04:07 +0000</pubDate>
+            <sparkle:version>4</sparkle:version>
+            <sparkle:shortVersionString>1.0.3</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <enclosure url="https://github.com/matthewjgl/fantuner-releases/releases/download/v1.0.3/FanTuner-1.0.3.dmg" length="8511242" type="application/octet-stream" sparkle:edSignature="7yP0kl3QRZ3EOZn/57UY3gAnLYZ693LvBkwnOeArVPXA2IVqT8xsYgCMYNQtsqd09EWzMM4H3qrkYE8FROffAQ=="/>
+        </item>
+        <item>
             <title>1.0.2</title>
             <pubDate>Wed, 22 Jul 2026 03:47:25 -0400</pubDate>
             <link>https://github.com/matthewjgl/fantuner-releases/releases/tag/v1.0.2</link>
@@ -26,15 +34,9 @@ IMPORTANT: This file was signed by Sparkle. Any modifications to this file requi
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
             <enclosure url="https://github.com/matthewjgl/fantuner-releases/releases/download/v1.0.1/FanTuner-1.0.1.dmg" length="6491964" type="application/octet-stream" sparkle:edSignature="1rU9ldozZ+9Cr17s9cS5TWWaolpFspXyf25cuREsxwMj2hEm7MAGX9t41rtnIeTtBRf9WQhCz2HA+WeSU0pBCQ=="/>
         </item>
-        <item>
-            <title>FanTuner 1.0</title>
-            <pubDate>Mon, 20 Jul 2026 06:03:37 +0000</pubDate>
-            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <enclosure url="https://github.com/matthewjgl/fantuner-releases/releases/download/v1.0/FanTuner-1.0.dmg" length="6457327" type="application/octet-stream" sparkle:edSignature="IcyZGEeeYPemaa05sFFGjp7x53asmXqqC5OLT6hGGyO3t1k/kRaNocdQDQBGd6NtCCSuoN6lzBcXO1uoW7lSAQ==" sparkle:shortVersionString="1.0" sparkle:version="1"/>
-        </item>
     </channel>
 </rss>
 <!-- sparkle-signatures:
-edSignature: 6f4VrGcCoV/TPR+suhP3LBlgiupuU3Fq3l6dI50i66jsHK22ZhzIqx2KdmxR+FRI9kOclWFOp480SJK/xtv5AQ==
-length: 2574
+edSignature: v2YiyWeMGBjfy9byLooliVZb95FyZCmoy1HfBEiyjcuLU/4154xoXGBxuLFLQngOuO1QrUW87upKHfNls5QMBQ==
+length: 2642
 -->
