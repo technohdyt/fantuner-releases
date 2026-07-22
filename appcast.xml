@@ -28,10 +28,10 @@ IMPORTANT: This file was signed by Sparkle. Any modifications to this file requi
             <title>FanTuner 1.0</title>
             <pubDate>Mon, 20 Jul 2026 06:03:37 +0000</pubDate>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <enclosure url="https://github.com/matthewjgl/fantuner-releases/releases/download/v1.0/FanTuner-1.0.dmg" length="6403100" type="application/octet-stream" sparkle:edSignature="o/AR18rSL6ixlVPrw+e8Xp1YqcfRAw9o7LMlmx5agdDJNLjyZpl28ZabNUag10lFSX0M2oRyB8ngPpfeggGfCw==" sparkle:shortVersionString="1.0" sparkle:version="1"></enclosure>
+            <enclosure url="https://github.com/matthewjgl/fantuner-releases/releases/download/v1.0/FanTuner-1.0.dmg" length="6457327" type="application/octet-stream" sparkle:edSignature="IcyZGEeeYPemaa05sFFGjp7x53asmXqqC5OLT6hGGyO3t1k/kRaNocdQDQBGd6NtCCSuoN6lzBcXO1uoW7lSAQ==" sparkle:shortVersionString="1.0" sparkle:version="1"></enclosure>
         </item>
     </channel>
 </rss><!-- sparkle-signatures:
-edSignature: HhXNdwDGqSksVPbQecBYBPoBqLH2mnzVl1hHYiA1YFI5HaEbvQJFvJajnDIR/R9KF4Sofidpte9CaGi2lFpcCQ==
+edSignature: mQWh7hiCM2BSZlD2KeX8/wmdTgw0D9LqoaD1gEimJoWwKSeKC9LGUGZ5PVlnz6qdR26/w3Rea/+2Ckp9JZedAw==
 length: 2604
 -->
