@@ -14,6 +14,16 @@ name: Update Sparkle appcast
 on:
   release:
     types: [published]
+  workflow_dispatch:
+    inputs:
+      release_tag:
+        description: Existing release tag to verify and regenerate from
+        required: true
+        type: string
+
+concurrency:
+  group: fan-tuner-appcast
+  cancel-in-progress: false
 
 permissions:
   contents: write
@@ -28,8 +38,9 @@ jobs:
 
       - name: Download release DMG
         run: |
+          release_tag="${{ github.event.release.tag_name || inputs.release_tag }}"
           mkdir -p updates
-          gh release download "${{ github.event.release.tag_name }}" \
+          gh release download "$release_tag" \
             --repo "${{ github.repository }}" \
             --pattern "*.dmg" --dir updates --clobber
           ls -la updates
@@ -45,11 +56,16 @@ jobs:
 
       - name: Generate appcast.xml
         run: |
+          release_tag="${{ github.event.release.tag_name || inputs.release_tag }}"
           printf '%s' "$SPARKLE_ED25519_KEY" > /tmp/sparkle-ed25519.key
           chmod 600 /tmp/sparkle-ed25519.key
+          # Seed the generator with the current feed so a new release does not
+          # erase still-supported historical entries.
+          cp appcast.xml updates/appcast.xml
           ./bin/generate_appcast \
             --ed-key-file /tmp/sparkle-ed25519.key \
-            --download-url-prefix "https://github.com/${{ github.repository }}/releases/download/${{ github.event.release.tag_name }}/" \
+            --download-url-prefix "https://github.com/${{ github.repository }}/releases/download/$release_tag/" \
+            --maximum-versions 3 \
             updates
           ./bin/sign_update \
             --ed-key-file /tmp/sparkle-ed25519.key \
@@ -61,12 +77,13 @@ jobs:
 
       - name: Commit updated appcast
         run: |
+          release_tag="${{ github.event.release.tag_name || inputs.release_tag }}"
           git config user.name "fantuner-release-bot"
           git config user.email "fantuner-release-bot@users.noreply.github.com"
           git add appcast.xml
           if git diff --cached --quiet; then
             echo "appcast.xml unchanged"
           else
-            git commit -m "appcast: ${{ github.event.release.tag_name }}"
+            git commit -m "appcast: $release_tag"
             git push
           fi
