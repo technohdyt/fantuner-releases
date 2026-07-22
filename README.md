@@ -8,7 +8,7 @@ This repository holds no source code. It exists so that:
   with the signed `FanTuner-X.Y.dmg` attached, and
 - `appcast.xml` on the `main` branch is the **Sparkle update feed** the app
   polls at
-  `https://raw.githubusercontent.com/technohdyt/fantuner-releases/main/appcast.xml`.
+  `https://raw.githubusercontent.com/matthewjgl/fantuner-releases/main/appcast.xml`.
 
 ## How a release works
 
@@ -25,7 +25,7 @@ The appcast workflow needs the Sparkle EdDSA private key as a repository
 secret:
 
 ```sh
-gh secret set SPARKLE_ED25519_KEY --repo technohdyt/fantuner-releases < ~/.config/fantuner/ed25519-private.key
+gh secret set SPARKLE_ED25519_KEY --repo matthewjgl/fantuner-releases < ~/.config/fantuner/ed25519-private.key
 ```
 
 The key must never be committed anywhere. The matching public key is embedded
