@@ -1,0 +1,72 @@
+name: Update Sparkle appcast
+
+# Regenerates appcast.xml whenever a GitHub Release is published in this
+# repository. The release must have the FanTuner DMG attached; the workflow
+# downloads it, recomputes the Sparkle EdDSA signature, and commits an updated
+# appcast.xml to the main branch (which the app polls via raw.githubusercontent).
+#
+# Required repository secret:
+#   SPARKLE_ED25519_KEY — the base64 contents of the Sparkle EdDSA private key
+#   file. Set it once with:
+#     gh secret set SPARKLE_ED25519_KEY --repo matthewjgl/fantuner-releases < ~/.config/fantuner/ed25519-private.key
+#   Treat it like a password: anyone holding it can sign updates.
+
+on:
+  release:
+    types: [published]
+
+permissions:
+  contents: write
+  actions: none
+
+jobs:
+  appcast:
+    runs-on: macos-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Download release DMG
+        run: |
+          mkdir -p updates
+          gh release download "${{ github.event.release.tag_name }}" \
+            --repo "${{ github.repository }}" \
+            --pattern "*.dmg" --dir updates --clobber
+          ls -la updates
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Fetch Sparkle tools
+        run: |
+          curl -sL -o sparkle.tar.xz \
+            https://github.com/sparkle-project/Sparkle/releases/download/2.6.4/Sparkle-2.6.4.tar.xz
+          tar -xf sparkle.tar.xz
+          ./bin/generate_appcast --version
+
+      - name: Generate appcast.xml
+        run: |
+          printf '%s' "$SPARKLE_ED25519_KEY" > /tmp/sparkle-ed25519.key
+          chmod 600 /tmp/sparkle-ed25519.key
+          ./bin/generate_appcast \
+            --ed-key-file /tmp/sparkle-ed25519.key \
+            --download-url-prefix "https://github.com/${{ github.repository }}/releases/download/${{ github.event.release.tag_name }}/" \
+            updates
+          ./bin/sign_update \
+            --ed-key-file /tmp/sparkle-ed25519.key \
+            updates/appcast.xml
+          cp updates/appcast.xml appcast.xml
+          rm -f /tmp/sparkle-ed25519.key
+        env:
+          SPARKLE_ED25519_KEY: ${{ secrets.SPARKLE_ED25519_KEY }}
+
+      - name: Commit updated appcast
+        run: |
+          git config user.name "fantuner-release-bot"
+          git config user.email "fantuner-release-bot@users.noreply.github.com"
+          git add appcast.xml
+          if git diff --cached --quiet; then
+            echo "appcast.xml unchanged"
+          else
+            git commit -m "appcast: ${{ github.event.release.tag_name }}"
+            git push
+          fi
